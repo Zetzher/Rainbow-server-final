@@ -351,11 +351,13 @@ const ocio = [{
     {
         nombre: "Grandes almacenes",
         descripcion: "Pues, en El Corte Inglés, o en otros grandes almacenes. Sus lavabos son otro clásico. En una página especializada incluso avisan que en el de plaza Cataluña hay que ir a las plantas -1, 1, 2 y 5 y en el de Francesc Macià, directos a la -1. Estas informaciones, no obstante, caducan rápido!",
+        image_url: "https://miro.medium.com/max/3840/1*J-NFiZHrrpK3KyCuMnh4pw.jpeg",
         type: ["cruising"]
     },
     {
         nombre: "Pipicans",
         descripcion: "Y hablando de lavabos, otro punto de encuentro, más heterosexual, es el de los sitios dónde la gente lleva a los perros para socializar mientras ellos defecan. Son espacios buenos para ligar, tal vez de una manera más tradicional. Antes de la penetración, se estila un mínimo de conversación simpática.",
+        image_url: "https://www.adiestrar-perros.com/blog/wp-content/uploads/2019/07/pipican-de-sarria-y-sant-gervasi-barcelona.jpg",
         type: ["cruising"]
     },
     {
@@ -379,6 +381,7 @@ const ocio = [{
     {
         nombre: "Le Glamour",
         descripcion: "Los que no buscáis tanto anonimato siempre podéis optar por el intercambio de parejas. Este es un club especializado en el tema con un nombre que ya lo dice todo. Se anuncia como un 'club liberal' y se supone que no tiene nada que ver con la connotación política del término.",
+        image_url: "https://media.timeout.com/images/101650473/630/472/image.jpg",
         type: ["cruising"]
     },
     {
