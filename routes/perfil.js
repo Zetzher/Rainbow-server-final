@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/user");
+const uploadPhoto = require("../cloudinary/cloudinary")
 
 //POST
 router.get("/", (req, res, next) => {
@@ -17,6 +18,8 @@ router.put("/edit/:id", async (req, res, next) => {
   try {
     const { nombre, apellido, edad, photo_url } = req.body;
     const userId = req.params.id;
+    console.log('photo_url', photo_url)
+    console.log('req.body', req.body)
     await User.findByIdAndUpdate(
       userId,
       { nombre, apellido, edad, photo_url }, {new:true}
@@ -27,5 +30,12 @@ router.put("/edit/:id", async (req, res, next) => {
   } catch (error) {
   }
 });
+
+//Cloudinary
+router.post("/upload", uploadPhoto.single("photo_url"), (req, res, next) => {
+
+  res.json({ photo_url: req.file.secure_url})
+
+})
 
 module.exports = router;
