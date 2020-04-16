@@ -96,11 +96,12 @@ router.put('/edit/:id', async (req, res, next) => {
 });
 
 // POST delete Evento
-router.post('/:id/delete', async (req, res, next) => {
+router.delete('/:id/delete', async (req, res, next) => {
     try {
         const {
             id
         } = req.params;
+        console.log('holiiii', req.params)
         console.log('El evento con este id va a ser borrado:', id);
         await Evento.findByIdAndRemove(id);
     } catch (error) {
