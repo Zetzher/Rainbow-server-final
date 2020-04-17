@@ -31,6 +31,18 @@ router.put("/edit/:id", async (req, res, next) => {
   }
 });
 
+//GET OTHER PROFILES
+
+router.get("/:id", (req, res, next) =>{
+  const userId = req.params.id
+  User.findById(userId)
+.then((dbResponse) => {
+  res.status(200).json(dbResponse);
+})
+.catch((err) => console.log("En metodo GET de profile ha ocurrido:", err));
+})
+
+
 //Cloudinary
 router.post("/upload", uploadPhoto.single("photo_url"), (req, res, next) => {
 
