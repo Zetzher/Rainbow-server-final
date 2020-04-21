@@ -18,18 +18,20 @@ router.get('/', (req, res, next) => {
 })
 
 
-//POST
-router.post('/create', (req, res, next) => {
+//POST, id puesto para enviar el id del current user al array del evento.
+router.post('/create/:id', (req, res, next) => {
     const {
         nombre,
         descripcion,
         lugar
     } = req.body
+    const id = req.params.id
     Evento
         .create({
             nombre,
             descripcion,
-            lugar
+            lugar,
+            id
         })
         .then((dbResponse) => {
             res.status(200)
@@ -91,7 +93,7 @@ router.put('/edit/:id', async (req, res, next) => {
             })
 
     } catch (error) {
-        //console.log(error);
+        console.log(error);
     }
 });
 
@@ -101,8 +103,6 @@ router.delete('/:id/delete', async (req, res, next) => {
         const {
             id
         } = req.params;
-        console.log('holiiii', req.params)
-        console.log('El evento con este id va a ser borrado:', id);
         await Evento.findByIdAndRemove(id);
     } catch (error) {
         next(error);
