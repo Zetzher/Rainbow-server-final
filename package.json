@@ -17,7 +17,7 @@
     "debug": "~2.6.9",
     "dotenv": "^8.0.0",
     "ejs": "^3.0.2",
-    "express": "~4.16.1",
+    "express": "~4.17.3",
     "express-session": "^1.16.1",
     "favicon": "0.0.2",
     "html": "^1.0.0",
